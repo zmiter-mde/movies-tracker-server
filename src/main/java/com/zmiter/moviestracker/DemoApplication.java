@@ -3,8 +3,8 @@ package com.zmiter.moviestracker;
 import com.zmiter.moviestracker.dtos.MovieDto;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootApplication
-@Controller
+@RestController
 public class DemoApplication {
 
 	@GetMapping("/movies")

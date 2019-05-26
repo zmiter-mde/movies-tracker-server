@@ -12,7 +12,7 @@
 	<artifactId>movies-tracker</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Movies Tracker</name>
-	<description>The app to track upcoming moview releases</description>
+	<description>The app to track upcoming movie releases</description>
 
 	<properties>
 		<java.version>1.8</java.version>
