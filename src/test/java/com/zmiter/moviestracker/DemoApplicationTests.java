@@ -1,4 +1,4 @@
-package com.example.moviestracker;
+package com.zmiter.moviestracker;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
