@@ -21,7 +21,7 @@ spring:
       oauth2:
         client:
           registration:
-            google:
+            GOOGLE:
               clientId: 1055604731841-3hrkisk7acj13pt4l5lc1gg9u27pqk7i.apps.googleusercontent.com
               clientSecret: SeHOIPhzTir4GIFeeXHB4bER
               redirectUriTemplate: "{baseUrl}/oauth2/callback/{registrationId}"
