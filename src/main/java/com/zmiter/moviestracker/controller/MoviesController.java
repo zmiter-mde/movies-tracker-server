@@ -24,6 +24,7 @@ public class MoviesController {
             @RequestParam(value = "page", defaultValue = "0") int page,
             @RequestParam(value = "size", defaultValue = "20") int size,
             @RequestParam(value = "category", defaultValue = "ALL", required = false) MovieCategory category) {
+
         return moviesService.getMovies(page, size, category);
     }
 

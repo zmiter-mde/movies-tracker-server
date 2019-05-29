@@ -1,0 +1,43 @@
+spring:
+    datasource:
+      driver-class-name: org.postgresql.Driver
+      tomcat:
+        max-active: 10
+        max-idle: 5
+        min-idle: 2
+        initial-size: 5
+        remove-abandoned: true
+    jpa:
+      show-sql: true
+      hibernate:
+        ddl-auto: update
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.PostgreSQL9Dialect
+          jdbc:
+            lob:
+              non_contextual_creation: true
+    security:
+      oauth2:
+        client:
+          registration:
+            GOOGLE:
+              clientId: 1055604731841-3hrkisk7acj13pt4l5lc1gg9u27pqk7i.apps.googleusercontent.com
+              clientSecret: SeHOIPhzTir4GIFeeXHB4bER
+              redirectUriTemplate: "{baseUrl}/oauth2/callback/{registrationId}"
+              scope:
+                - email
+                - profile
+app:
+  auth:
+    tokenSecret: 926D96C90030DD58429D2751AC1BDBBC
+    tokenExpirationMsec: 864000000
+  oauth2:
+    # After successfully authenticating with the OAuth2 Provider,
+    # we'll be generating an auth token for the user and sending the token to the
+    # redirectUri mentioned by the frontend client in the /oauth2/authorize request.
+    # We're not using cookies because they won't work well in mobile clients.
+    authorizedRedirectUris:
+      - http://localhost:3000/oauth2redirect
+      - myandroidapp://oauth2redirect
+      - myiosapp://oauth2redirect
