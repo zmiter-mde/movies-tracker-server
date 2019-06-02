@@ -1,7 +1,6 @@
 package com.zmiter.moviestracker;
 
 import com.zmiter.moviestracker.dtos.MovieDto;
-import com.zmiter.moviestracker.enumeration.MovieCategory;
 import com.zmiter.moviestracker.service.MoviesService;
 import org.junit.Assert;
 import org.junit.Test;
@@ -21,7 +20,7 @@ public class MovieServiceTest {
 
     @Test
     public void whenApplicationStarts_thenHibernateCreatesInitialRecords() {
-        List<MovieDto> movies = moviesService.getMovies(0, 10, MovieCategory.ALL);
+        List<MovieDto> movies = moviesService.getMovies(0, 10);
 
         Assert.assertTrue(movies.size() > 0);
     }
