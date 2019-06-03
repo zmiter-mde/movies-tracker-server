@@ -2,7 +2,7 @@ package com.zmiter.moviestracker.security;
 
 import com.zmiter.moviestracker.entities.User;
 import com.zmiter.moviestracker.dao.UsersDao;
-import com.zmiter.moviestracker.exception.auth.ResourceNotFoundException;
+import com.zmiter.moviestracker.exception.common.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

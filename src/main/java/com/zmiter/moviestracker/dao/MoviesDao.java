@@ -17,7 +17,7 @@ public interface MoviesDao extends JpaRepository<Movie, Long> {
     @Query("SELECT umwl.movie FROM UserMovieWatchList umwl WHERE umwl.user.id = :userId ORDER BY umwl.movie.releaseDate ASC")
     List<Movie> findMoviesFromUserWatchList(@Param("userId") Long userId, Pageable pageRequest);
 
-    List<Movie> findMoviesByTitleEnIgnoreCaseContainingOrTitleRuIgnoreCaseContaining(
+    List<Movie> findMoviesByTitleEnIgnoreCaseContainingOrTitleRuIgnoreCaseContainingOrderByReleaseDateAsc(
             @Param("titleEn") String titleEn,
             @Param("titleRu") String titleRu,
             Pageable pageable);

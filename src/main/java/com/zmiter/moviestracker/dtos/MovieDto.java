@@ -12,6 +12,7 @@ public class MovieDto {
     private String imageUrl;
     private LocalDate releaseDate;
     private boolean isReleased;
+    private boolean wannaWatch;
 
     public MovieDto() {}
 
@@ -77,5 +78,13 @@ public class MovieDto {
 
     public void setReleased(boolean released) {
         isReleased = released;
+    }
+
+    public boolean isWannaWatch() {
+        return wannaWatch;
+    }
+
+    public void setWannaWatch(boolean wannaWatch) {
+        this.wannaWatch = wannaWatch;
     }
 }

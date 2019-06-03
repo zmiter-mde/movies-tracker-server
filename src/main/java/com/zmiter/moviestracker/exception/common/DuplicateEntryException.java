@@ -1,20 +1,25 @@
-package com.zmiter.moviestracker.exception.auth;
+package com.zmiter.moviestracker.exception.common;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-@ResponseStatus(HttpStatus.NOT_FOUND)
-public class ResourceNotFoundException extends RuntimeException {
+@ResponseStatus(HttpStatus.CONFLICT)
+public class DuplicateEntryException extends Exception {
 
     private String resourceName;
     private String fieldName;
     private Object fieldValue;
 
-    public ResourceNotFoundException(String resourceName, String fieldName, Object fieldValue) {
-        super(String.format("%s not found with %s : '%s'", resourceName, fieldName, fieldValue));
+    public DuplicateEntryException(String resourceName, String fieldName, Object fieldValue) {
+        super(String.format("%s with %s : '%s' already exists", resourceName, fieldName, fieldValue));
         this.resourceName = resourceName;
         this.fieldName = fieldName;
         this.fieldValue = fieldValue;
+    }
+
+    public DuplicateEntryException(String resourceName, String message) {
+        super(message);
+        this.resourceName = resourceName;
     }
 
     public String getResourceName() {

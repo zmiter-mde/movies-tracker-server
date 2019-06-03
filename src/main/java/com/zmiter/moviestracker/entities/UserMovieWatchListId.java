@@ -14,7 +14,9 @@ public class UserMovieWatchListId implements Serializable {
     @Column(name = "movie_id", nullable = false)
     private Long movieId;
 
-    public UserMovieWatchListId(Long userId, Long movieId) {
+    public UserMovieWatchListId() {}
+
+    public UserMovieWatchListId(Long movieId, Long userId) {
         this.userId = userId;
         this.movieId = movieId;
     }
