@@ -1,5 +1,5 @@
 package com.zmiter.moviestracker.enumeration;
 
 public enum MovieCategory {
-    RELEASED, UPCOMING, ALL
+    ALL, WATCH_LIST
 }
